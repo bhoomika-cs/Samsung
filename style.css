@@ -1,13 +1,27 @@
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 nav{
-    margin-top: 0 ;
+    margin-top: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: sans-serif;
     font-size: 15px;
+    z-index: 10;
+}
+header .top-link a{
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    font-family: sans-serif;
+    margin-bottom: 12px;
+    padding-right:0 ;
 }
 .logo{
     display: flex;
@@ -15,16 +29,7 @@ nav{
     align-items: center;
     padding: 10px 20px;
 }
-nav.logo{
-    font-size: medium;
-    margin-left: 10px;
-    margin-top: 10px;
-    display: flex;
-    justify-content:space-evenly;
-    width: auto;
-    height: 60px;
-    align-items: center;
-}
+
 .logo img{
     width: 150px;
     height: 150px;
@@ -45,93 +50,49 @@ nav.logo{
     font-size: 13px;
     font-weight: 400;
     color: black;
-    font-weight:bold ;
+    font-weight:bold ;  
+}
+.video-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
     
-    
 }
-.list{
-    display: block;
-    width: auto;
-    margin-right: 0.9rem;
-    justify-content:flex-end;
-    align-items: flex-start;
-}
-.list ul {
-    list-style-type: none;
-    display: flex;
-    margin:20px;
-    height: 10px;
-    width: auto;
-    justify-content:flex-end;
-    align-items:flex-start;
-}
-.box1 li a{
-    display: flex;
-    margin-right: 100px;
-    margin-top: 0;
-    font-family: sans-serif;
-    justify-content: flex-end;
-    font-size: 15px;
-}
-.logo a img{
-    display: flex;
-    justify-content:flex-end;
-    list-style: none;
-    gap: 5px;
-    padding: 0;
-    margin-left: 5px;
-    width:20px;
-    height:20px;
-}
-.list li a{
-    text-decoration: none;
-    gap: 10px;
-    color: black;
-    justify-content: space-evenly;
-    align-items: center;
-    font-weight: bold;
-    margin-right: 10px;
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover; 
+  z-index: -1;
+} 
 
-}
-.main{
-    display: flex;
-}
-
-.inside{
-    margin-top: 10px;
-    font-size: 40px;
+.video-content{
+    margin-top: 350px;
+    margin-left: 100px;
     font-weight: bolder;
     font-family: sans-serif; 
     line-height: 5px; 
     
 }
-#p1{
-    color: rgb(4, 173, 240);
+.video-content ul {
     display: flex;
-    justify-content: flex-end;
-    margin-right: 250px;
-    margin-top: 150px;
-}
-#p2{
-    color: black;
-    display: flex;
-    justify-content: flex-end;
-}
-.inside ul {
-    display: flex;
-    justify-content:flex-end;
+    justify-content:flex-start;
     list-style: none;
     align-items: center;
-    margin-right: 400px;
+    margin-left: 5px;  
     flex-direction: row;
     gap: 30px;
     font-family: sans-serif;
     text-decoration: none;
     color: black;
-    font-size: 15px;
+    font-size: 12px;
 
 }
-.inside li a{
+.video-content li a{
     color:black; 
     text-decoration: none;   
     font-family: sans-serif;
@@ -144,19 +105,20 @@ nav.logo{
 .btn{
     display: inline-block;
     border: 1px;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border-color: black;
     border-radius: 25px;
     border-style: solid ;
-    width: 30px;
-    height: 15px;
+    width: 70px;
+    height: 30px;
+    margin-left: 10px;
 }
 .btn:hover {
   background-color: black;
   color: white;
 }
 .bg img{
-    margin-top: 80px;
+    margin-top:250px;
 }
 .optionsdiv1{
     display:flex;
@@ -165,11 +127,12 @@ nav.logo{
     align-items: center;
     width: auto;
     height:300px ;
-    margin-top: 20px;  
+    margin-top: 60px;  
 }
 .card{
+    padding: 25px;
     background: #f8f5f5;
-    height: 300px;
+    height: 400px;
     width: 320px;
     display: flex;
     flex-direction: column;
@@ -178,6 +141,15 @@ nav.logo{
 .pop-image{
     width: 250px;
     height: auto;
+    margin-top: 50px;
+    
+}
+.pop-image1{
+    width: 250px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    
 }
 .pop-image2{
     width: 200px;
@@ -193,10 +165,29 @@ nav.logo{
     margin-bottom: 10px;
 }
 .pop-image4{
-    width: 190px;
+    margin-top: 40px;
+    width: 180px;
     height: auto;
+    margin-bottom: 30px;
+}
+.pop-rgb{
+    height: auto;
+    width: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .card button{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: #000;
+    opacity: 0;
+    transition: 0.7s;
+    padding: 10px;
+    width: 80px;
+    transform: translateY(20px);
+    margin-bottom: 30px;
+}
+.card .btn2{
     border: 1px solid black;
     border-radius: 20px;
     background: #000;
@@ -212,6 +203,7 @@ nav.logo{
     transform: translateY(0);
 }
 .card h3{
+
     text-align: center;
     font-family: sans-serif;
 }
@@ -231,15 +223,20 @@ nav.logo{
     transform: scale(1.1); 
     transition: 0.7s;
 }
+.card:hover .pop-rgb {
+    transform: scale(1.1); 
+    transition: 0.7s;
+}
 .optionsdiv1 p{
     margin-top: 30px;
 }
 h1{
     font-family: sans-serif;
     font-size: 40px;
+    
 }
 .bgimg{
-    margin-top: 80px;
+    margin-top: 70px;
 }
 .bottom-line{
     display: flex;
@@ -247,23 +244,24 @@ h1{
     margin-left: 25px;
     font-family: sans-serif;
     gap: 110px;
+    margin-top: 50px;
+    line-height: 25px;
 }
-.bottom-line p{
+.bottom-line .price{
     font-weight:bold;
 
 }
 .mrp{
     color: #838080;
 }
-
-
 .last{
-    margin-top: 200px;
+    margin-top: 50px;
     background: #eeebeb;
     padding:10px;
     font-size: 12px;
     color: #3d3c3c;
     font-family: sans-serif;
+    line-height: 30px;
 }
 .footer {
     display: flex;
@@ -304,7 +302,7 @@ h1{
 }
 
 .copyright {
-    padding: 0px;
+    padding: 20px;
     font-size: 12px;
     border-bottom:1px solid #ddd;
     font-family: sans-serif;
@@ -318,7 +316,7 @@ h1{
 .last-line{
     display: flex;
     border-top: #ddd 1px solid;
-    padding: 20px;
+    padding: 10px;
     font-family: sans-serif;
 
 }
