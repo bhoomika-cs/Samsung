@@ -83,8 +83,13 @@ nav.logo{
     justify-content: space-evenly;
     align-items: center;
     font-weight: bold;
+    margin-right: 10px;
 
 }
+.main{
+    display: flex;
+}
+
 .inside{
     margin-top: 10px;
     font-size: 40px;
@@ -105,12 +110,12 @@ nav.logo{
     display: flex;
     justify-content: flex-end;
 }
-.lower ul {
+.inside ul {
     display: flex;
     justify-content:flex-end;
     list-style: none;
     align-items: center;
-    margin-right: 490px;
+    margin-right: 400px;
     flex-direction: row;
     gap: 30px;
     font-family: sans-serif;
@@ -119,14 +124,16 @@ nav.logo{
     font-size: 15px;
 
 }
-.lower li a{
+.inside li a{
     color:black; 
     text-decoration: none;   
     font-family: sans-serif;
 }
 #li{
     text-decoration: underline;
+    flex-direction: row;
 }
+
 .btn{
     display: inline-block;
     border: 1px;
@@ -142,55 +149,70 @@ nav.logo{
   color: white;
 }
 .bg img{
-    margin-top: 200px;
+    margin-top: 80px;
 }
 .optionsdiv1{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
     width: auto;
-    height:250px ;
-    margin-top: 50px;
+    height:300px ;
+    margin-top: 20px;  
 }
 .card{
-    padding: 25px 25px;
-    background: #f0eded;
-    font-family: sans-serif;
-    font-weight: bold ;
-    width: 270px;
+    background: #f8f5f5;
     height: 300px;
-    text-align: center;
-    font-size: 20px;
-    transition: 0.3s;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
-.card img{
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
+.pop-image{
+    width: 250px;
+    height: auto;
+}
+.pop-image2{
+    width: 200px;
+    height: auto;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 .card button{
-    border-radius:20px ;
-    border: 1px  ;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-}
-.card button:hover{
-    color: white;
+    border: 1px solid black;
+    border-radius: 20px;
     background: #000;
+    opacity: 0;
+    transition: 0.7s;
+    padding: 10px;
+    width: 80px;
+    transform: translateY(20px);
 }
-.card:hover{
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px;
+.card:hover button{
+    opacity: 1;
+    color: white;
+    transform: translateY(0);
+}
+.card h3{
+    text-align: center;
+    font-family: sans-serif;
+}
+.card:hover .pop-image {
+    transform: scale(1.1); 
+    transition: 0.7s;
+}
+.card:hover .pop-image2 {
+    transform: scale(1.1); 
+    transition: 0.7s;
 }
 h1{
     font-family: sans-serif;
     font-size: 40px;
 }
 .bgimg{
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .last{
     margin-top: 200px;
@@ -246,39 +268,37 @@ h1{
     color: #494747;
     
 }
+.copyright p a{
+    text-decoration: none;
+    color: rgb(39, 61, 255);
+}
 .last-line{
     display: flex;
     border-top: #ddd 1px solid;
+    padding: 20px;
+    font-family: sans-serif;
 
 }
-ul{
-    list-style: none;
-    size: 10px;
+.last-links a{
+    text-decoration: none;
+    color: #3d3c3c;
+    margin-right:25px ;
+
+}
+.icons a img{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+}
+.icons {
     display: flex;
-}
-
-.info li a{
-    
+    margin-left: auto;
+    gap: 10px;
     text-decoration: none;
-    word-spacing: 10px;
 }
-
-.icons img{
-    justify-content: flex-end;
-    align-items: flex-start;
-    size: 10px;
-    padding: 5px;
-    width: 19px;
-    height: 19px;
-    margin: 2px;
+.icons a{
     text-decoration: none;
-
-}
-.icons{
-    justify-content: flex-end;
-    align-items: flex-start;
-    text-decoration: none;
-
+    color: #3d3c3c;
 }
 
 
