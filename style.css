@@ -334,18 +334,18 @@ h1{
     
 }
 .second{
-    margin-left:170px ;
+    margin-left:180px ;
 }
 .third{
-    margin-left:95px ;
+    margin-left:140px ;
 }
 .fourth{
-    margin-left:160px ;
+    margin-left:190px ;
     margin-right: 0;
 
 }
 .bottom-line h3{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .bottom-line .price .save{
@@ -358,6 +358,7 @@ h1{
     gap: 120px;
     margin-left: 30px;
     font-family: sans-serif;
+    line-height: 25px;
 }
 .price{
     display: inline;
