@@ -1,27 +1,31 @@
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 nav{
     margin-top: 0;
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-family: sans-serif;
     font-size: 15px;
     z-index: 10;
 }
-header .top-link a{
+.top-links{ 
     display: flex;
+    flex-direction: row;   
     justify-content: flex-end;
-    gap: 20px;
     font-family: sans-serif;
-    margin-bottom: 12px;
-    padding-right:0 ;
+    color: #000;
+    
+    font-size: 13px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.top-links a{
+    text-decoration: none;
 }
 .logo{
     display: flex;
@@ -51,6 +55,15 @@ header .top-link a{
     font-weight: 400;
     color: black;
     font-weight:bold ;  
+}
+.nav-links{
+    justify-content: flex-start;
+}
+
+.icons{
+    
+    justify-content: flex-end;
+    margin-right: 0;
 }
 .video-container{
     position: relative;
@@ -105,7 +118,7 @@ header .top-link a{
 .btn{
     display: inline-block;
     border: 1px;
-    padding: 15px 20px;
+    padding: 20px 20px;
     border-color: black;
     border-radius: 25px;
     border-style: solid ;
@@ -131,7 +144,7 @@ header .top-link a{
 }
 .card{
     padding: 25px;
-    background: #f8f5f5;
+    background: #f5f4f4;
     height: 400px;
     width: 320px;
     display: flex;
@@ -148,15 +161,15 @@ header .top-link a{
     width: 250px;
     height: auto;
     margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     
 }
 .pop-image2{
     width: 200px;
     height: auto;
     align-items: center;
-    margin-top: auto;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 .pop-image3{
     height: 250px;
@@ -171,10 +184,10 @@ header .top-link a{
     margin-bottom: 30px;
 }
 .pop-rgb{
-    height: auto;
+    height: 170px;
     width: 250px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 .card button{
     border: 1px solid black;
@@ -185,7 +198,19 @@ header .top-link a{
     padding: 10px;
     width: 80px;
     transform: translateY(20px);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    
+}
+.card .btn1{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: #000;
+    opacity: 0;
+    transition: 0.7s;
+    padding: 10px;
+    width: 80px;
+    transform: translateY(20px);
+    margin-top: 20px;
 }
 .card .btn2{
     border: 1px solid black;
@@ -196,18 +221,34 @@ header .top-link a{
     padding: 10px;
     width: 80px;
     transform: translateY(20px);
+    margin-top: 10px;
 }
+.card .btn4{
+    border: 1px solid black;
+    border-radius: 20px;
+    background: #000;
+    opacity: 0;
+    transition: 0.7s;
+    padding: 10px;
+    width: 80px;
+    transform: translateY(20px);
+    margin-top: 20px;
+}
+
 .card:hover button{
     opacity: 1;
     color: white;
     transform: translateY(0);
 }
 .card h3{
-
     text-align: center;
     font-family: sans-serif;
 }
 .card:hover .pop-image {
+    transform: scale(1.1); 
+    transition: 0.7s;
+}
+.card:hover .pop-image1 {
     transform: scale(1.1); 
     transition: 0.7s;
 }
@@ -233,7 +274,44 @@ header .top-link a{
 h1{
     font-family: sans-serif;
     font-size: 40px;
+    margin-left: 30px;
+    margin-top: 50px; 
+}
+.recom{
+    padding: 20px;
+    display: flex;
+    gap: 1px;
+}
+.pop-r{
+    width: 260px;
+    height: auto;
+    margin-top: 80px;
+    margin-left: 10px;
+}
+.pop-r:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+.card2{
+    background: #f5f5f5;
+    margin-left: 10px;
+    border: 1px;
+    border-radius: 5px;
+    width: 350px ;
+    height: 330px;
+
+}
+.pop-image-r{
+    width: 200px;
+    height: auto;
+    margin-top: 70px;
+    margin-left: 50px;
     
+}
+.pop-image-r:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+
 }
 .bgimg{
     margin-top: 70px;
@@ -241,25 +319,42 @@ h1{
 .bottom-line{
     display: flex;
     flex-direction: row;
-    margin-left: 25px;
+    margin-left: 40px;
     font-family: sans-serif;
     gap: 110px;
-    margin-top: 50px;
+    margin-top: 20px;
     line-height: 25px;
+    margin-left: 60px;
 }
-.bottom-line .price{
+.bottom-line h3{
+    font-size: 25px
+}
+.bottom-line .price .save{
     font-weight:bold;
 
 }
+.price{
+    display: inline;
+    margin-right: 10px;
+}
+.save{
+    font-size:15px ;
+    color: rgb(64, 92, 248);
+    display: inline;
+}
 .mrp{
     color: #838080;
+    font-size: 13px;
+}
+.s26{
+    margin-left: 30px;
 }
 .last{
     margin-top: 50px;
-    background: #eeebeb;
-    padding:10px;
-    font-size: 12px;
-    color: #3d3c3c;
+    background: #f8f8f8;
+    padding:15px;
+    font-size: 11px;
+    color: #222121;
     font-family: sans-serif;
     line-height: 30px;
 }
@@ -306,8 +401,7 @@ h1{
     font-size: 12px;
     border-bottom:1px solid #ddd;
     font-family: sans-serif;
-    color: #494747;
-    
+    color: #494747;   
 }
 .copyright p a{
     text-decoration: none;
@@ -318,13 +412,11 @@ h1{
     border-top: #ddd 1px solid;
     padding: 10px;
     font-family: sans-serif;
-
 }
 .last-links a{
     text-decoration: none;
     color: #3d3c3c;
     margin-right:25px ;
-
 }
 .icons a img{
     width: 20px;
@@ -341,16 +433,3 @@ h1{
     text-decoration: none;
     color: #3d3c3c;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
